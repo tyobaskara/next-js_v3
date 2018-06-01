@@ -1,0 +1,19 @@
+@import './etc/fonts';
+@import './vendor/bootstrap';
+@import './vendor/animate';
+@import './vendor/fontawesome';
+@import './etc/variables';
+@import './etc/mixin';
+
+* { 
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html, body {
+    font-size: 62.5%; //10px
+    overflow-x: hidden;
+}
