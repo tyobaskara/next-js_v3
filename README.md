@@ -1,4 +1,4 @@
-# shopee
+# next-js_v3
 
 - npm install
 
