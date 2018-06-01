@@ -11003,4 +11003,7 @@ html, body {
   font-size: 62.5%;
   overflow-x: hidden; }
 
+img {
+  max-width: 100%; }
+
 /*# sourceMappingURL=maps/main.css.map */

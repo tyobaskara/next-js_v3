@@ -415,79 +415,18 @@
   /*********************
 BREAKPOINTS
 *********************/
-
-$screen-xs: 576px;
-$screen-sm: 768px;
-$screen-ssm: 767px;
-$screen-md: 992px;
-$screen-lg: 1200px;
-
-// Xtra Small devices
-@mixin xs {
-  @media (max-width: #{$screen-xs}) {
-      @content;
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
   }
 }
-
-// Small devices
-@mixin ssm {
-  @media (max-width: #{$screen-ssm}) {
-      @content;
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    @content;
   }
 }
-
-// Small devices
-@mixin sm {
-  @media (max-width: #{$screen-sm}) {
-      @content;
-  }
-}
-
-// Medium devices
-@mixin md {
-  @media (max-width: #{$screen-md}) {
-      @content;
-  }
-}
-
-// Large devices
-@mixin lg {
-  @media (max-width: #{$screen-lg}) {
-      @content;
-  }
-}
-
-// Xtra Small devices
-@mixin xs-min {
-  @media (min-width: #{$screen-xs}) {
-      @content;
-  }
-}
-
-// Small devices
-@mixin ssm-min {
-  @media (min-width: #{$screen-ssm}) {
-      @content;
-  }
-}
-
-// Small devices
-@mixin sm-min {
-  @media (min-width: #{$screen-sm}) {
-      @content;
-  }
-}
-
-// Medium devices
-@mixin md-min {
-  @media (min-width: #{$screen-md}) {
-      @content;
-  }
-}
-
-// Large devices
-@mixin lg-min {
-  @media (min-width: #{$screen-lg}) {
-      @content;
-  }
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  } 
 }

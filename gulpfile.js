@@ -50,7 +50,7 @@ gulp.task('default', ['sass','sass-watch'], function() {
   browserSync.init({ 
     proxy: {
       target: "http://localhost:4000",
-      ws: true
+      ws: false
   }
   });
 });
