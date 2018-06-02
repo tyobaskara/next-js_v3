@@ -12,7 +12,7 @@ watch = require('gulp-watch'),
 runs = require('run-sequence'),
 cssnano = require('gulp-cssnano');
 
-var src = path.join(__dirname, 'styles-master/main.scss');
+var src = path.join(__dirname, 'styles-master/pages/*.scss');
 var dest = path.join(__dirname, 'styles');
 var destDev = path.join(__dirname, 'static');
 var cssSrc = path.join(__dirname, 'styles-master/**/*.@(scss|css)');
@@ -20,7 +20,6 @@ var cssSrc = path.join(__dirname, 'styles-master/**/*.@(scss|css)');
 gulp.task('sass', function() {
   return gulp.src(src)
     .pipe(sourcemaps.init())
-    .pipe(concat('main.css'))
     .pipe(sass({ includePaths: 'node_modules/' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer({ browsers: ['> 0%'] })]))
     .pipe(sourcemaps.write('./maps'))
@@ -30,7 +29,6 @@ gulp.task('sass', function() {
 
 gulp.task('sass:min', function() {
   return gulp.src(src)
-    .pipe(concat('main.css'))
     .pipe(sass({ includePaths: 'node_modules/', outputStyle: 'compressed' }))
     .pipe(postcss([autoprefixer({ browsers: ['> 0%'] })]))
     .pipe(cssnano())

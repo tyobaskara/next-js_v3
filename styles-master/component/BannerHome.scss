@@ -5,7 +5,7 @@
 
 @media screen and (min-width: 1024px) {
     .banner-home {
-        background-image: url('./static/images/banner-bg.jpg');
+        background-image: url('/static/images/banner-bg.jpg');
         background-size: 15%;
         border-bottom-left-radius:50%;
         border-bottom-right-radius:50%;
@@ -15,7 +15,7 @@
             display: none;
         }
         &__desktop {
-            background-image: url('./static/images/banner-1.jpg');
+            background-image: url('/static/images/banner-1.jpg');
             background-repeat: no-repeat;
             background-position: center center;
             background-size: auto 100%;
