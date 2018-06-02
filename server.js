@@ -12,6 +12,9 @@ app.prepare()
   const server = express();
 
   if (process.env.NODE_ENV === "production") {
+    server.use("/static", express.static(__dirname + "/static", {
+        maxAge: "365d"
+    }));
     server.use(compression())
   }
 
