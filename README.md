@@ -8,9 +8,9 @@ Global install:
 Local install:
 - npm install
 
-Localhost:3000 :
-- terminal 1 (server) -> npm run init 
-- terminal 2 (client | Dev Mode for Global main.css) -> gulp
+Run Localhost:
+- terminal 1 (localhost:4000) -> npm run init 
+- terminal 2 (Dev Mode localhost:3000 for Global main.css) -> gulp
 
 deploy :
 - npm init
